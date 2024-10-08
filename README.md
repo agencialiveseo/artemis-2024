@@ -104,4 +104,6 @@ Vamos criar uma aplicação de **rastreio e extração de informações de pági
 ---
 
 ## Navegar pelo projeto
-- *módulo 1* [Arquitetura do projeto](./dia1/README.md)
+- **Apresentação do projeto** *(Você está aqui)*
+- **Módulo 1** [Arquitetura do projeto](./dia1/README.md)
+- **Módulo 2** [Docker e Preparação do Ambiente](./dia2/README.md)

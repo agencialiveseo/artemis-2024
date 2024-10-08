@@ -180,3 +180,5 @@ Vamos juntos construir uma aplicação robusta e escalável, aprendendo e compar
 
 ## Navegar pelo projeto
 - [Apresentação do projeto](../README.md)
+- **Módulo 1**: Arquitetura da Aplicação *(Você está aqui)*
+- **Módulo 2** [Introdução ao Docker](../dia2/README.md)
