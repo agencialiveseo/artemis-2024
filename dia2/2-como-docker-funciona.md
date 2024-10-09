@@ -261,6 +261,21 @@ Nessa rede, para acessar recursos de fora do container, você pode usar o IP do 
 
 Dessa forma, poderemos acessar a API do Docker no Gateway através do endereço `http://172.18.0.1:2375` para testes locais da aplicação rodando já no Docker.
 
+```mermaid
+graph TD
+    subgraph rede1 [Rede Docker rede1]
+        rede1docker1["rede1-docker1"]
+        rede1docker2["rede1-docker2"]
+        rede1docker1 -- Comunicação --> rede1docker2
+    end
+    subgraph rede2 [Rede Docker rede2]
+        rede2docker1["rede2-docker1"]
+        rede2docker2["rede2-docker2"]
+        rede2docker1 -- Comunicação --> rede2docker2
+    end
+    rede1docker1 <-. Não pode comunicar .-> rede2docker2
+```
+
 ---
 
 ### 5. **Criando um Dockerfile Customizado**
@@ -314,4 +329,5 @@ O Docker vai ler o Dockerfile e criar a imagem com base nas instruções.
 - - [Instalando docker em Linux / WSL](./1-instalar-wsl-e-docker.md)
 - - [Instalando Docker Desktop em Windows / Mac](./1-instalando-docker-desktop.md)
 - - Como o Docker Funciona *(Você está aqui)*
+- - [Docker Volume](./2-docker-volume.md)
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)

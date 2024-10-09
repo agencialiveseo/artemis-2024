@@ -14,6 +14,8 @@ Bem-vindo à introdução do Docker! Neste módulo, você aprenderá como instal
 
 - **Descrição:** Entenda os principais componentes e nomenclaturas utilizadas no Docker, como contêineres, imagens e volumes. Este guia técnico mostra como esses conceitos se interligam para garantir a execução eficiente das aplicações.
 
+    [Material auxiliar - Docker Volume](./2-docker-volume.md)
+
 ### 3. Docker Compose e MySQL 8 *([Configuração Completa](./3-docker-compose-e-mysql.md))*
 
 - **Descrição:** Neste tutorial, vamos aprender a configurar e orquestrar contêineres utilizando Docker Compose, incluindo a configuração de um banco de dados MySQL 8 em um contê
@@ -37,4 +39,5 @@ Aqui estão alguns recursos adicionais que podem ajudar no seu aprendizado com D
 - - [Instalando docker em Linux / WSL](./1-instalar-wsl-e-docker.md)
 - - [Instalando Docker Desktop em Windows / Mac](./1-instalando-docker-desktop.md)
 - - [Como o Docker Funciona](./2-como-docker-funciona.md)
+- - [Docker Volume](./2-docker-volume.md)
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)

@@ -69,4 +69,5 @@ Caso encontre algum problema, verifique a aba **Troubleshoot** no Docker Desktop
 - - [Instalando docker em Linux / WSL](./1-instalar-wsl-e-docker.md)
 - - Instalando Docker Desktop em Windows / Mac *(Você está aqui)*
 - - [Como o Docker Funciona](./2-como-docker-funciona.md)
+- - [Docker Volume](./2-docker-volume.md)
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)

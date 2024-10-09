@@ -122,4 +122,5 @@ Se tudo estiver configurado corretamente, você verá uma mensagem indicando que
 - - Instalando docker em Linux / WSL *(Você está aqui)*
 - - [Instalando Docker Desktop em Windows / Mac](./1-instalando-docker-desktop.md)
 - - [Como o Docker Funciona](./2-como-docker-funciona.md)
+- - [Docker Volume](./2-docker-volume.md)
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)
