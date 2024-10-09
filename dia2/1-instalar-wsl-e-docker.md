@@ -124,3 +124,4 @@ Se tudo estiver configurado corretamente, você verá uma mensagem indicando que
 - - [Como o Docker Funciona](./2-como-docker-funciona.md)
 - - [Docker Volume](./2-docker-volume.md)
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)
+- **Módulo 3** [MySQL básico](./dia3/README.md)

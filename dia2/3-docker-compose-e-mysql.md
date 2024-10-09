@@ -240,3 +240,4 @@ Isso também remove os volumes, limpando os dados armazenados.
 - - [Como o Docker Funciona](./2-como-docker-funciona.md)
 - - [Docker Volume](./2-docker-volume.md)
 - - Docker Compose e MySQL 8 *(Você está aqui)*
+- **Módulo 3** [MySQL básico](./dia3/README.md)

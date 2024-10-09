@@ -331,3 +331,4 @@ O Docker vai ler o Dockerfile e criar a imagem com base nas instruções.
 - - Como o Docker Funciona *(Você está aqui)*
 - - [Docker Volume](./2-docker-volume.md)
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)
+- **Módulo 3** [MySQL básico](./dia3/README.md)

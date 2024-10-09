@@ -71,3 +71,4 @@ Caso encontre algum problema, verifique a aba **Troubleshoot** no Docker Desktop
 - - [Como o Docker Funciona](./2-como-docker-funciona.md)
 - - [Docker Volume](./2-docker-volume.md)
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)
+- **Módulo 3** [MySQL básico](./dia3/README.md)
