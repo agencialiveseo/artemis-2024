@@ -41,11 +41,9 @@ Agora que você já tem o Docker Compose instalado, vamos criar um arquivo `dock
 O arquivo `docker-compose.yml` segue uma estrutura YAML, onde definimos cada serviço (container) que será executado. Abaixo está um exemplo básico de como rodar o MySQL 8 com Docker Compose:
 
 ```yaml
-version: '3.8' # Define a versão do Docker Compose
-
 services: 
-  db:
-    image: mysql:8   # Especifica a imagem do MySQL 8, versões disponíveis em https://hub.docker.com/_/mysql
+  mysql_server:
+    image: mysql:latest   # Especifica a imagem do MySQL em sua última versão, versões disponíveis em https://hub.docker.com/_/mysql
     container_name: mysql_server  # Nome do container
     environment: 
       MYSQL_ROOT_PASSWORD: artemis2024 # Senha do usuário root
@@ -56,6 +54,9 @@ services:
       - "3306:3306" # Expõe a porta 3306 no host
     volumes:
       - db_data:/var/lib/mysql # Volume para persistência de dados
+
+networks:
+  artemis: # Rede para comunicação entre containers
 
 volumes:
   db_data: # Volume para armazenar os dados do banco
@@ -149,8 +150,6 @@ Para a comunicação funcionar de fora da rede, com 127.0.0.1/localhost, você p
 O Docker Compose é especialmente útil quando você precisa rodar múltiplos serviços que precisam se comunicar. Por exemplo, podemos adicionar um serviço de aplicação que se conecta ao MySQL:
 
 ```yaml
-version: '3.8'
-
 services:
   app-api:
     image: app-api  # Sua aplicação
@@ -163,7 +162,6 @@ services:
     depends_on: # informa quais containeres devem estar rodando antes de iniciar este
       - mysql_server
       - redis_server
-      - nats_server
     ports:
       - "0.0.0.0:80:3000" # Mapeia a porta interna 3000 na porta 80 do host, externa, para nos ajudar a testar.
   
@@ -179,18 +177,6 @@ services:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
-
-  nats_server:
-    image: nats:latest # https://hub.docker.com/_/nats
-    container_name: nats_server
-    networks:
-      - artemis
-    ports:
-      - "4222:4222"
-    volumes:
-      - ./nats/jetstream/:/data/jetstream/ # Mapeamos um volume para persistir os dados do JetStream, ao invés de usar o volume padrão
-      - ./nats/nats-server.json:/nats-server.conf # Mapeamos o arquivo de configuração do NATS
-    command: "--config /nats-server.conf" # Passamos o atributo do comando nats para usar nosso arquivo de config
 
   redis_server:
     image: redis:alpine # https://hub.docker.com/_/redis
