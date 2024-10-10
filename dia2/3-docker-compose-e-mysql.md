@@ -43,7 +43,7 @@ O arquivo `docker-compose.yml` segue uma estrutura YAML, onde definimos cada ser
 ```yaml
 services: 
   mysql_server:
-    image: mysql:latest   # Especifica a imagem do MySQL em sua última versão, versões disponíveis em https://hub.docker.com/_/mysql
+    image: mysql:8   # Especifica a imagem do MySQL em sua última versão, versões disponíveis em https://hub.docker.com/_/mysql
     container_name: mysql_server  # Nome do container
     environment: 
       MYSQL_ROOT_PASSWORD: artemis2024 # Senha do usuário root
@@ -104,11 +104,8 @@ docker-compose ps
 
 ### 5. **Explicação dos Elementos do `docker-compose.yml`**
 
-#### Versão
-- A chave `version` define a versão do Docker Compose que estamos usando. No exemplo, usamos a versão '3.8', que é uma das mais recentes e estáveis.
-
 #### Serviços
-- **services** é onde você define os containers. No exemplo, criamos um serviço chamado `db` para o MySQL.
+- **services** é onde você define os containers. No exemplo, criamos um serviço chamado `mysql_server` para o MySQL.
   - `image`: Define qual imagem será usada para criar o container.
   - `container_name`: Define um nome para o container.
   - `environment`: Configura variáveis de ambiente. No caso do MySQL, definimos a senha do root, o nome do banco de dados, o nome do usuário e sua senha.
@@ -193,7 +190,7 @@ volumes:
   db_data:
 ```
 
-Aqui adicionamos o serviço `app`, que depende do serviço `db`. Com a chave `depends_on`, garantimos que o MySQL estará disponível antes da aplicação ser iniciada.
+Aqui adicionamos o serviço `app`, que depende do serviço `mysql_server`. Com a chave `depends_on`, garantimos que o MySQL estará disponível antes da aplicação ser iniciada.
 
 ---
 

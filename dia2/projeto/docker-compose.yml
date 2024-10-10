@@ -1,0 +1,24 @@
+services: 
+  mysql_server:
+    image: mysql:8   # Especifica a imagem do MySQL em sua última versão, versões disponíveis em https://hub.docker.com/_/mysql
+    container_name: mysql_server  # Nome do container
+    environment: 
+      MYSQL_ROOT_PASSWORD: artemis2024 # Senha do usuário root
+      MYSQL_DATABASE: artemis # Nome do banco de dados a ser criado
+    networks:
+      - artemis # Rede para comunicação entre containers
+    ports:
+      - "3306:3306" # Expõe a porta 3306 no host
+    volumes:
+      - db_data:/var/lib/mysql # Volume para persistência de dados
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -partemis2024 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  artemis: # Rede para comunicação entre containers
+
+volumes:
+  db_data: # Volume para armazenar os dados do banco
