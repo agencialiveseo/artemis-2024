@@ -322,6 +322,12 @@ O NATS.io é uma ferramenta poderosa para construção de sistemas distribuídos
 
 ---
 
+### **Links Úteis**
+- [Conceito de subjects e wildcards](https://docs.nats.io/nats-concepts/subjects)
+- [Inscrições com Wildcard](https://docs.nats.io/using-nats/developer/receiving/wildcards)
+
+---
+
 ## Navegar pelo projeto
 
 - [Apresentação do projeto](../README.md)
