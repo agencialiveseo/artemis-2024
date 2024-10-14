@@ -1,0 +1,43 @@
+services:
+  mysql_server: # Sua aplicação
+    image: mysql:8 # https://hub.docker.com/_/mysql
+    container_name: mysql_server
+    environment:
+      MYSQL_ROOT_PASSWORD: artemis2024 # Senha do usuário root
+      MYSQL_DATABASE: artemis # Nome do banco de dados
+    networks:
+      - artemis
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -partemis2024 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nats_server:
+    image: nats:alpine # https://hub.docker.com/_/nats
+    container_name: nats_server
+    networks:
+      - artemis
+    ports:
+      - "4222:4222"
+      - "0.0.0.0:8222:8222"
+    volumes:
+      - nats_data:/data/jetstream # Mapeamos um volume para persistir os dados do JetStream, ao invés de usar o volume padrão
+      - ./nats/nats-server.conf:/data/nats-server.conf # Mapeamos o arquivo de configuração do NATS
+    command: --debug --config /data/nats-server.conf
+    healthcheck:
+      test: wget http://localhost:8222/healthz -q -S -O -
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  artemis:
+
+volumes:
+  db_data:
+  nats_data:

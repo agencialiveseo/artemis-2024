@@ -1,0 +1,26 @@
+{
+  "name": "app-crawler",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start:dev": "npx tsx --watch ./src/main",
+    "start": "npx tsx --expose-gc --trace-gc ./src/main",
+    "build": "npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "nats": "^2.28.2",
+    "puppeteer": "^23.4.1",
+    "robots-txt-guard": "^1.0.2",
+    "robots-txt-parse": "^2.0.1"
+  }
+}
