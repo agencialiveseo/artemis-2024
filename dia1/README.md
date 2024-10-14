@@ -183,3 +183,5 @@ Vamos juntos construir uma aplicação robusta e escalável, aprendendo e compar
 - **Módulo 1**: Arquitetura da Aplicação *(Você está aqui)*
 - **Módulo 2** [Introdução ao Docker](../dia2/README.md)
 - **Módulo 3** [MySQL básico](./dia3/README.md)
+- **Módulo 4** [Introdução ao NATS](./dia4/README.md)
+- **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](./dia5/README.md)

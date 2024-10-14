@@ -72,3 +72,5 @@ Caso encontre algum problema, verifique a aba **Troubleshoot** no Docker Desktop
 - - [Docker Volume](./2-docker-volume.md)
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)
 - **Módulo 3** [MySQL básico](./dia3/README.md)
+- **Módulo 4** [Introdução ao NATS](./dia4/README.md)
+- **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](./dia5/README.md)

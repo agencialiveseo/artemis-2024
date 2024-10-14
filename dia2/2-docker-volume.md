@@ -333,3 +333,5 @@ rm -rf ~/pasta
 - - Docker Volume *(Você está aqui)*
 - - [Docker Compose e MySQL 8](./3-docker-compose-e-mysql.md)
 - **Módulo 3** [MySQL básico](./dia3/README.md)
+- **Módulo 4** [Introdução ao NATS](./dia4/README.md)
+- **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](./dia5/README.md)

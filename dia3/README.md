@@ -389,3 +389,5 @@ Esses conhecimentos são essenciais para o desenvolvimento de aplicações que u
 - **Módulo 1**: [Arquitetura da Aplicação](../dia1/README.md)
 - **Módulo 2**: [Introdução ao Docker](../dia2/README.md)
 - **Módulo 3**: MySQL Básico *(Você está aqui)*
+- **Módulo 4**: [Introdução ao NATS](../dia4/README.md)
+- **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](./dia5/README.md)
