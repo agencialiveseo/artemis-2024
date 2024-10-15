@@ -35,6 +35,21 @@ services:
       timeout: 5s
       retries: 5
 
+  app-gateway:
+    image: app-gateway
+    container_name: app-gateway
+    environment: # Podemos usar o nome dos containeres na mesma rede para acessar o serviço, ao invés de usar o IP
+      NATS_SERVERS: "nats://nats_server:4222"
+      DOCKER_API_URL: "http://172.18.0.1:2375" # No ambiente local, você pode conferir o endereço de sua máquina (gateway de rede) na rede docker com o comando `docker network inspect projeto_artemis` e buscar o valor IPAM.Config.Gateway
+    networks:
+      - artemis
+    depends_on: # informa quais containeres devem estar rodando antes de iniciar este
+      mysql_server:
+        condition: service_healthy
+      nats_server:
+        condition: service_healthy
+    build: ./app-gateway/
+  
 networks:
   artemis:
 
