@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  crawlers  Crawler[]
+}
+
+model Crawler {
+  id        Int           @id @default(autoincrement())
+  user_id   Int
+  url       String
+  status    CrawlerStatus @default(PENDING)
+  data      String?       @db.Text
+  createdAt DateTime      @default(now())
+  user      User          @relation(fields: [user_id], references: [id])
+  @@index([user_id])
+}
+
+enum CrawlerStatus {
+  PENDING
+  DONE
+  ERROR
+}
