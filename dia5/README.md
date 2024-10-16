@@ -363,12 +363,9 @@ Com o ambiente configurado e a estrutura definida, estamos prontos para começar
 
 - [Apresentação do projeto](../README.md)
 - **Módulo 1**: [Arquitetura da Aplicação](../dia1/README.md)
-- **Módulo 2**: [Introdução ao Docker](./README.md)
-  - [Instalando Docker em Linux / WSL](./1-instalar-wsl-e-docker.md)
-  - [Instalando Docker Desktop em Windows / Mac](./1-instalando-docker-desktop.md)
-  - [Como o Docker Funciona](./2-como-docker-funciona.md)
-  - [Docker Volume](./2-docker-volume.md)
-  - [Docker Compose e MySQL 8](./docker-compose-mysql.md)
-- **Módulo 3**: [MySQL Básico](./dia3/README.md)
-- **Módulo 4**: [NATS e Mensageria](./modulo4-nats-mensageria.md)
-- **Módulo 5**: Introdução ao TypeScript com Projeto Prático **(Você está aqui)**
+- **Módulo 2**: [Introdução ao Docker](../dia2/README.md)
+- **Módulo 3**: [MySQL Básico](../dia3/README.md)
+- **Módulo 4**: [NATS e Mensageria](../dia4/README.md)
+- **Módulo 5**: Introdução ao TypeScript com Projeto Prático *(Você está aqui)*
+- **Módulo 6**: [Introdução ao NestJS e Criação do Gateway](../dia6/README.md)
+- **Módulo 7**: [Aplicação de API com NestJS e NATS](../dia7/README.md)

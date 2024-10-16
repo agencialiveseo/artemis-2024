@@ -108,3 +108,7 @@ Vamos criar uma aplicação de **rastreio e extração de informações de pági
 - **Módulo 1** [Arquitetura do projeto](./dia1/README.md)
 - **Módulo 2** [Docker e Preparação do Ambiente](./dia2/README.md)
 - **Módulo 3** [MySQL básico](./dia3/README.md)
+- **Módulo 4** [Introdução ao NATS](./dia4/README.md)
+- **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](./dia5/README.md)
+- **Módulo 6**: [Introdução ao NestJS e Criação do Gateway](./dia6/README.md)
+- **Módulo 7**: [Aplicação de API com NestJS e NATS](./dia7/README.md)

@@ -182,6 +182,8 @@ Vamos juntos construir uma aplicação robusta e escalável, aprendendo e compar
 - [Apresentação do projeto](../README.md)
 - **Módulo 1**: Arquitetura da Aplicação *(Você está aqui)*
 - **Módulo 2** [Introdução ao Docker](../dia2/README.md)
-- **Módulo 3** [MySQL básico](./dia3/README.md)
-- **Módulo 4** [Introdução ao NATS](./dia4/README.md)
-- **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](./dia5/README.md)
+- **Módulo 3** [MySQL básico](../dia3/README.md)
+- **Módulo 4** [Introdução ao NATS](../dia4/README.md)
+- **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](../dia5/README.md)
+- **Módulo 6**: [Introdução ao NestJS e Criação do Gateway](../dia6/README.md)
+- **Módulo 7**: [Aplicação de API com NestJS e NATS](../dia7/README.md)

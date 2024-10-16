@@ -40,7 +40,7 @@ services:
     container_name: app-gateway
     environment: # Podemos usar o nome dos containeres na mesma rede para acessar o serviço, ao invés de usar o IP
       NATS_SERVERS: "nats://nats_server:4222"
-      DOCKER_API_URL: "http://172.18.0.1:2375" # No ambiente local, você pode conferir o endereço de sua máquina (gateway de rede) na rede docker com o comando `docker network inspect projeto_artemis` e buscar o valor IPAM.Config.Gateway
+      DOCKER_API_URL: "http://host.docker.internal:2375" # No ambiente local, você pode conferir o endereço de sua máquina (gateway de rede) na rede docker com o comando `docker network inspect projeto_artemis` e buscar o valor IPAM.Config.Gateway
     networks:
       - artemis
     depends_on: # informa quais containeres devem estar rodando antes de iniciar este
@@ -50,6 +50,23 @@ services:
         condition: service_healthy
     build: ./app-gateway/
   
+  app-api:
+    image: app-api
+    container_name: app-api
+    environment: 
+      JWT_SECRET: "supersecret"
+      NATS_SERVERS: "nats://nats_server:4222"
+      DATABASE_URL: "mysql://root:artemis2024@mysql_server:3306/artemis"
+      REDIS_SERVER: "redis://redis_server:6379"
+    networks:
+      - artemis
+    ports:
+      - "3000:3000"
+    depends_on: 
+      app-gateway:
+        condition: service_started
+    build: ./app-api/ # Informamos o diretório onde está o Dockerfile
+
 networks:
   artemis:
 

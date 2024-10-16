@@ -383,3 +383,13 @@ node envia-crawler.js
 
 --- 
 
+## Navegar pelo Projeto
+
+- [Apresentação do projeto](../README.md)
+- **Módulo 1**: [Arquitetura da Aplicação](../dia1/README.md)
+- **Módulo 2**: [Introdução ao Docker](../dia2/README.md)
+- **Módulo 3**: [MySQL Básico](../dia3/README.md)
+- **Módulo 4**: [NATS e Mensageria](../dia4/README.md)
+- **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](../dia5/README.md)
+- **Módulo 6**: Introdução ao NestJS e Criação do Gateway *(Você está aqui)*
+- **Módulo 7**: [Aplicação de API com NestJS e NATS](../dia7/README.md)
