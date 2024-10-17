@@ -76,3 +76,4 @@ Caso encontre algum problema, verifique a aba **Troubleshoot** no Docker Desktop
 - **Módulo 5**: [Introdução ao TypeScript com Projeto Prático](../dia5/README.md)
 - **Módulo 6**: [Introdução ao NestJS e Criação do Gateway](../dia6/README.md)
 - **Módulo 7**: [Aplicação de API com NestJS e NATS](../dia7/README.md)
+- **Módulo 8**: [Front-end com Vue.js 3](../dia8/README.md)

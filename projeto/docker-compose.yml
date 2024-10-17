@@ -67,6 +67,18 @@ services:
         condition: service_started
     build: ./app-api/ # Informamos o diretório onde está o Dockerfile
 
+  app-front:
+    image: app-front
+    container_name: app-front
+    networks:
+      - artemis
+    ports:
+      - "0.0.0.0:80:80" # nginx fará o fornecimento de conteúdo estático e proxy reverso para o app-api
+    depends_on:
+      app-api:
+        condition: service_started
+    build: ./app-front/
+  
 networks:
   artemis:
 

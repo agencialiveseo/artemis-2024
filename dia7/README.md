@@ -76,4 +76,4 @@ Com os módulos de **Account** e **Crawler** implementados, nossa aplicação es
 - **Módulo 7**: Aplicação de API com NestJS e NATS *(Você está aqui)*
 - - [Módulo de Account](./README-Account.md)
 - - [Módulo de Crawler](./README-Crawler.md)
-- **Módulo 8**: [Frontend com VueJS e](../dia8/README.md)
+- **Módulo 8**: [Frontend com Vue.js 3](../dia8/README.md)

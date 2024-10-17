@@ -586,4 +586,4 @@ Você deverá receber mensagens com o evento `CRAWLER.UPDATE` no WebSocket confo
 - **Módulo 7**: [Aplicação de API com NestJS e NATS](./README.md)
 - - [Módulo de Account](./README-Account.md)
 - - Módulo de Crawler *(Você está aqui)*
-- **Módulo 8**: [Frontend com VueJS e](../dia8/README.md)
+- **Módulo 8**: [Frontend com VueJS 3](../dia8/README.md)
